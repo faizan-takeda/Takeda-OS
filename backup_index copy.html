@@ -51,8 +51,8 @@
   .sidebar{position:fixed;left:0;top:0;bottom:0;width:290px;padding:28px 22px 20px;background:linear-gradient(185deg,#0A1628 0%,#0C1B33 55%,#0A1628 100%);border-right:1px solid rgba(255,255,255,.06);z-index:100;display:flex;flex-direction:column}
   .sidebar::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px circle at 80% 0%,rgba(230,0,18,.14),transparent 60%)}
   .brand{display:flex;align-items:center;gap:12px;position:relative;z-index:1}
-  .brand-mark{padding:8px 14px;border-radius:11px;flex-shrink:0;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.32)}
-  .brand-mark img{display:block;height:32px;width:auto}
+  .brand-mark{width:40px;height:40px;border-radius:11px;flex-shrink:0;background:linear-gradient(145deg,#fff,#f3f0ea);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.32)}
+  .brand-mark span{font-family:var(--serif);font-weight:600;font-size:25px;color:var(--red);line-height:1}
   .brand-name{color:#fff;font-weight:800;font-size:16px;letter-spacing:.01em}
   .brand-sub{color:rgba(255,255,255,.42);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;margin-top:3px}
   .ctx-card{margin-top:22px;padding:14px 16px;border-radius:14px;position:relative;z-index:1;background:linear-gradient(135deg,rgba(230,0,18,.16),rgba(230,0,18,.04));border:1px solid rgba(230,0,18,.22)}
@@ -169,10 +169,10 @@
   .lg{display:flex;align-items:center;gap:6px;font-size:10.5px;color:var(--ink-2);font-family:var(--mono)}
   .lg .dot{width:9px;height:9px;border-radius:50%}
   #worldmap{width:100%;height:520px}
-  #worldmap .country{fill:#E9E5DC;stroke:#fff;stroke-width:.5;transition:fill .2s,stroke .2s,stroke-width .2s}
-  #worldmap .country.market{cursor:pointer;stroke:#fff;stroke-width:.7}
-  #worldmap .country.market:hover{filter:brightness(.88);stroke:var(--red);stroke-width:1.2}
-  #worldmap .country.selected{stroke:var(--red);stroke-width:2;filter:brightness(.85)}
+  #worldmap .country{fill:#E9E5DC;stroke:#fff;stroke-width:.5;transition:fill .2s}
+  #worldmap .country.market{cursor:pointer}
+  #worldmap .country.market:hover{filter:brightness(.94)}
+  #worldmap .country.selected{stroke:var(--red);stroke-width:1.4}
   #worldmap .mdot{cursor:pointer}
   #worldmap .mdot circle{transition:all .3s}
   #worldmap .pulse{animation:mapPulse 2.6s infinite;transform-origin:center;transform-box:fill-box}
@@ -493,7 +493,7 @@
   <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
     <div class="brand">
-      <div class="brand-mark"><img src="images/takeda_logo.png" alt="Takeda" /></div>
+      <div class="brand-mark"><span>T</span></div>
       <div>
         <div class="brand-name">Takeda&nbsp;OS</div>
         <div class="brand-sub">Enterprise Learning Layer</div>
@@ -536,9 +536,8 @@
         <div class="eyebrow"><span class="ed"></span>Takeda OS · International Business Unit · FY2026–27</div>
         <h1 class="hero-h1">Our systems record what <em>happened</em>.<br>Takeda&nbsp;OS learns what it <em>means</em>.</h1>
         <p class="hero-lead">
-          Three global launches are <strong>not three launches.</strong> They are ~85 market-level launch events across 6 core countries, 11 clusters, ~30 managed markets.<br><br>
-          The aim is not just CRM but how we can build an <strong>Ecosystem of Data</strong> across CRM, R&amp;D, Market, Digital Health etc where each supports the other, so that <span class="hero-highlight">"we can develop systems and approaches to solve present problems and support future innovation."<br><br></span>
-          Takeda already owns the platforms Salesforce Life Sciences Cloud, Veeva Vault, Databricks, AWS, Informatica, myAibou. None of them, alone or together, turns a signal in one market into <span class="hero-hl">governed, reusable learning that makes every other market smarter.</span> That gap is Takeda&nbsp;OS.<span class="hero-hl">"Where we can develop systems and approaches to solve present problems and support future innovation."</span>
+          Three priority launches are not three launches. Operationally they are <strong>dozens of market-level launch moments</strong> across the US and Giles Platford's new International Business Unit.<br><br>
+          Takeda already owns the platforms — Salesforce Life Sciences Cloud, Veeva Vault, Databricks, AWS, Informatica, myAibou. None of them, alone or together, turns a signal in one market into <span class="hero-hl">governed, reusable learning that makes every other market smarter.</span> That gap is Takeda&nbsp;OS.
         </p>
         <div class="stats">
           <div class="stat">
@@ -556,7 +555,11 @@
             <div class="stat-val" data-target="200" data-prefix="¥" data-suffix="B+" data-dec="0">¥0B</div>
             <div class="stat-meta">~$1.26B annualized</div>
           </div>
-          
+          <div class="stat">
+            <div class="stat-label">Zasocitinib Peak Sales</div>
+            <div class="stat-val" data-target="6" data-prefix="$" data-suffix="B" data-dec="0">$0B</div>
+            <div class="stat-meta neutral">trade-press estimate $3–6B</div>
+          </div>
         </div>
       </div>
       <div class="scroll-hint"><span>Scroll to explore</span><div class="ln"></div></div>
@@ -570,13 +573,19 @@
         <div class="eyebrow"><span class="ed"></span>Why Now · Strategic Context</div>
         <h2 class="h-title">A transformation built for <em>speed</em> needs a way to <em>learn faster</em>.</h2>
         <p class="h-sub">
-          Under Julie Kim, FY2026 is framed around "simplicity, speed and efficiency without sacrificing quality." The reorganization is titled to <strong>"Fuel Speed, Competitiveness and Future Growth."</strong> Learning velocity is the major instrument on that vision.
+          Under CEO-elect Julie Kim, FY2026 is framed around "simplicity, speed and efficiency — without sacrificing quality." The reorganization is titled to <strong>"Fuel Speed, Competitiveness and Future Growth."</strong> Learning velocity is the missing instrument on that dashboard.
         </p>
         <div class="kpis" style="grid-template-columns:repeat(3,1fr)">
           <div class="kpi reveal">
             <div class="kpi-head"><div class="kpi-label">Transformation Office</div><div class="kpi-ic"><svg class="icon" stroke="#E60012" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div></div>
             <div class="kpi-val" style="font-size:30px;line-height:1.15;letter-spacing:-.01em">New<br>function</div>
-            <div class="kpi-sub">Connects transformation incl. AI initiatives. Gabriele Ricci.</div>
+            <div class="kpi-sub">Connects transformation incl. AI initiatives. Gabriele Ricci → Chief Transformation Officer.</div>
+            <div class="kpi-trend neutral"><span class="badge confirmed">Confirmed</span></div>
+          </div>
+          <div class="kpi blue reveal">
+            <div class="kpi-head"><div class="kpi-label">FY2026 Restructuring</div><div class="kpi-ic"><svg class="icon" stroke="#1E40AF" viewBox="0 0 24 24"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="8"/><rect x="13" y="6" width="3" height="12"/></svg></div></div>
+            <div class="kpi-val" data-target="170" data-prefix="¥" data-suffix="B" data-dec="0">¥0B</div>
+            <div class="kpi-sub">May-13 firmed forecast (vs ¥70.8B FY2025). ~4,500 roles affected.</div>
             <div class="kpi-trend neutral"><span class="badge confirmed">Confirmed</span></div>
           </div>
           <div class="kpi amber reveal">
@@ -589,7 +598,7 @@
         <div class="banner reveal">
           <div class="banner-tag">The Core Problem</div>
           <h3>Knowledge today lives in <em>slides, inboxes, and individual market teams.</em></h3>
-          <p>Takeda's platforms are systems of <b>record</b> and <b>engagement</b> they capture that an interaction, inquiry, case, or submission happened. They do not systematically ask: <b>What did we learn? Is it reusable? Where does it apply next? How safely can it transfer across borders?</b> With multiple market-level launch moments looming across three assets, the cost of not reusing learning compounds duplicated MLR content, repeated analyses, re-discovered payer objections, and slow launch sequencing.</p>
+          <p>Takeda's platforms are systems of <b>record</b> and <b>engagement</b> — they capture that an interaction, inquiry, case, or submission happened. They do not systematically ask: <b>What did we learn? Is it reusable? Where does it apply next? How safely can it transfer across borders?</b> With multiple market-level launch moments looming across three assets, the cost of not reusing learning compounds — duplicated MLR content, repeated analyses, re-discovered payer objections, and slow launch sequencing.</p>
         </div>
       </section>
 
@@ -597,7 +606,7 @@
       <section class="section" id="ex-thesis">
         <div class="eyebrow"><span class="ed"></span>The Strategic Thesis</div>
         <h2 class="h-title">CRM tells us an interaction <em>happened</em>.<br>Takeda&nbsp;OS asks <em>what did we learn?</em></h2>
-        <p class="h-sub">Salesforce Life Sciences Cloud is the system of record. Takeda OS is a thin governed <strong>learning layer</strong> that sits above it turning fragmented activity into reusable enterprise intelligence. It is not a new CRM, dashboard, chatbot, or Veeva replacement.</p>
+        <p class="h-sub">Salesforce Life Sciences Cloud is the system of record. Takeda OS is a thin governed <strong>learning layer</strong> that sits above it — turning fragmented activity into reusable enterprise intelligence. It is not a new CRM, dashboard, chatbot, or Veeva replacement.</p>
         <div class="twocol">
           <div class="tcard old reveal">
             <div class="tcard-label">Today · Each market learns alone</div>
@@ -608,16 +617,16 @@
               <div class="fstep"><span class="fnum">C</span>Market B may or may not hear about it</div>
               <div class="fstep"><span class="fnum">D</span>Market C re-discovers the same objection</div>
               <div class="fstep"><span class="fnum">E</span>Market D builds a local workaround</div>
-              <div class="fstep"><span class="fnum">F</span>Global sees activity not learning velocity</div>
+              <div class="fstep"><span class="fnum">F</span>Global sees activity — not learning velocity</div>
             </div>
           </div>
           <div class="tcard new reveal">
             <div class="tcard-label">Takeda OS · Every market makes every other smarter</div>
-            <h3 class="tcard-title">One launch, run 85 times each <em>smarter</em> than the last.</h3>
+            <h3 class="tcard-title">One launch, run 85 times — each <em>smarter</em> than the last.</h3>
             <div class="tflow">
               <div class="fstep"><span class="fnum">1</span>Market captures a structured signal</div>
               <div class="fstep"><span class="fnum">2</span>Mapped to one enterprise taxonomy</div>
-              <div class="fstep"><span class="fnum">3</span>Pattern extracted records abstracted away</div>
+              <div class="fstep"><span class="fnum">3</span>Pattern extracted — records abstracted away</div>
               <div class="fstep"><span class="fnum">4</span>Applicability scored vs similar markets</div>
               <div class="fstep"><span class="fnum">5</span>Human-reviewed: medical · legal · MLR</div>
               <div class="fstep"><span class="fnum">6</span>Distributed to similar markets · impact measured</div>
@@ -627,7 +636,7 @@
         <div class="banner reveal" style="background:linear-gradient(135deg,#1a1207,#2a1d0c)">
           <div class="banner-tag" style="color:#FFB454">The mental model · US Army CALL</div>
           <h3>"We're not opening 16 warehouses.<br>We're opening one warehouse <em>16 times.</em>"</h3>
-          <p>The strongest precedent isn't a software vendor it's the US Army's Center for Army Lessons Learned: a disciplined collect → distill → disseminate → reuse loop where lessons from one event reshape the next. <b>Takeda OS is "CALL for pharma launches"</b> we're not running 85 launches; we're running one launch 85 times, each one smarter than the last.</p>
+          <p>The strongest precedent isn't a software vendor — it's the US Army's Center for Army Lessons Learned: a disciplined collect → distill → disseminate → reuse loop where lessons from one event reshape the next. <b>Takeda OS is "CALL for pharma launches"</b> — we're not running 85 launches; we're running one launch 85 times, each one smarter than the last.</p>
         </div>
       </section>
 
@@ -635,41 +644,36 @@
       <section class="section" id="ex-cockpit">
         <div class="eyebrow"><span class="ed"></span>01 · Learning Velocity Cockpit</div>
         <h2 class="h-title">Decisions, not dashboards.</h2>
-        <p class="h-sub">The headline metric is not CRM adoption or activity. It is <strong>days from signal to reusable, governed action</strong> and how often a learning gets reused across markets. <span class="badge illus">Illustrative PoC figures</span></p>
+        <p class="h-sub">The headline metric is not CRM adoption or activity. It is <strong>days from signal to reusable, governed action</strong> — and how often a learning gets reused across markets. <span class="badge illus">Illustrative PoC figures</span></p>
         <div class="kpis">
           <div class="kpi reveal">
             <div class="kpi-head"><div class="kpi-label">Learning Velocity</div><div class="kpi-ic"><svg class="icon" stroke="#E60012" viewBox="0 0 24 24"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div></div>
             <div class="kpi-val" data-target="21" data-dec="0">0<span class="u">days</span></div>
             <div class="kpi-sub">Median signal → reusable action.<br>Target state: 7 days.</div>
-            <div class="kpi-sub">Every validated market signal should become a reusable global action within 7 days.</div>
             <div class="kpi-trend up">▼ 50% vs prior quarter</div>
           </div>
           <div class="kpi blue reveal">
             <div class="kpi-head"><div class="kpi-label">Learning Reuse Rate</div><div class="kpi-ic"><svg class="icon" stroke="#1E40AF" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg></div></div>
             <div class="kpi-val" data-target="38" data-suffix="%" data-dec="0">0<span class="u">%</span></div>
             <div class="kpi-sub">Validated learnings reused across ≥2 markets.</div>
-            <div class="kpi-sub">Germany spots repeated HCP questions on Zazo’s positioning versus injectables/orals; Takeda OS validates the insight, creates a reusable FAQ/access objection guide, and scales it to Spain and Italy.</div>
             <div class="kpi-trend up">▲ 12pp vs baseline</div>
           </div>
           <div class="kpi amber reveal">
             <div class="kpi-head"><div class="kpi-label">Access Risk Index</div><div class="kpi-ic"><svg class="icon" stroke="#B45309" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h16.9a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div></div>
             <div class="kpi-val" data-target="64" data-suffix="/100" data-dec="0">0<span class="u">/100</span></div>
             <div class="kpi-sub">3 HTA markets with comparator / step-through barriers.</div>
-            <div class="kpi-sub">A launch can struggle even if HCP interest is strong, because patients may not get access if payers delay, restrict, or reject reimbursement.</div>
             <div class="kpi-trend down">2 new objections detected</div>
           </div>
           <div class="kpi cyan reveal">
             <div class="kpi-head"><div class="kpi-label">AI-Answer Visibility</div><div class="kpi-ic"><svg class="icon" stroke="#0E7490" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div></div>
             <div class="kpi-val" data-target="23" data-suffix="%" data-dec="0">0<span class="u">%</span></div>
             <div class="kpi-sub">Takeda citation share in LLM psoriasis answers.</div>
-            <div class="kpi-sub">In the new digital world, people do not only search Google. They ask AI systems. If Takeda’s disease education, science, and patient-support content are not structured and discoverable.</div>
             <div class="kpi-trend down">Sotyktu cited at 41%</div>
           </div>
           <div class="kpi emerald reveal">
             <div class="kpi-head"><div class="kpi-label">MLR Cycle Time</div><div class="kpi-ic"><svg class="icon" stroke="#047857" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div></div>
             <div class="kpi-val" data-target="18" data-dec="0">0<span class="u">days</span></div>
             <div class="kpi-sub">Avg review cycle. ~42% of local content duplicates global-approved assets.</div>
-            <div class="kpi-sub">Global already has an approved psoriasis FAQ, but 5 countries create their own similar versions from scratch.</div>
             <div class="kpi-trend up">Reuse can cut to ~11d</div>
           </div>
           <div class="kpi purple reveal">
@@ -684,7 +688,7 @@
       <section class="section" id="ex-map">
         <div class="eyebrow"><span class="ed"></span>02 · Global Market Intelligence</div>
         <h2 class="h-title">One launch. <em>Every market</em> on one screen.</h2>
-        <p class="h-sub">Click any highlighted market to inspect its real access model, HTA body, launch readiness and live signal flow. Markets aren't ranked by size they're scored by <strong>how much one market's learning applies to another.</strong></p>
+        <p class="h-sub">Click any highlighted market to inspect its real access model, HTA body, launch readiness and live signal flow. Markets aren't ranked by size — they're scored by <strong>how much one market's learning applies to another.</strong></p>
         <div class="panel reveal">
           <div class="panel-head">
             <div>
@@ -724,7 +728,7 @@
       <section class="section" id="ex-learning">
         <div class="eyebrow"><span class="ed"></span>03 · The Cross-Market Learning Engine</div>
         <h2 class="h-title">The most important question:<br><em>"What did another market learn that should change my plan?"</em></h2>
-        <p class="h-sub">When Germany's access team solves an AMNOG comparator objection, that pattern should sharpen the UK, France and Canada dossiers within <strong>weeks, not months</strong> without ever moving a single patient record across a border.</p>
+        <p class="h-sub">When Germany's access team solves an AMNOG comparator objection, that pattern should sharpen the UK, France and Canada dossiers within <strong>weeks, not years</strong> — without ever moving a single patient record across a border.</p>
 
         <div class="lflow reveal" style="margin-bottom:26px">
           <div class="lnode a">
@@ -740,12 +744,12 @@
           <div class="lnode b">
             <div class="lnode-tag">Targets · UK · France · Canada</div>
             <h4>A reusable comparator evidence pack</h4>
-            <p>Takeda OS scores the pattern as highly applicable to other HTA-gatekeeper markets (UK 0.90, FR 0.85, CA 0.80) and <em>low</em> applicability to free-pricing US (0.30). It routes a governed recommendation not the German data.</p>
+            <p>Takeda OS scores the pattern as highly applicable to other HTA-gatekeeper markets (UK 0.90, FR 0.85, CA 0.80) and <em>low</em> applicability to free-pricing US (0.30). It routes a governed recommendation — not the German data.</p>
           </div>
         </div>
 
         <div class="panel reveal" style="padding:0;overflow:hidden">
-          <div style="padding:24px 28px 0"><div class="panel-title" style="font-size:22px">Learning Object · LO-DE-ACCESS-0007</div><div class="panel-sub">Every learning is a structured, governed object not a slide. This is the unit of reuse.</div></div>
+          <div style="padding:24px 28px 0"><div class="panel-title" style="font-size:22px">Learning Object · LO-DE-ACCESS-0007</div><div class="panel-sub">Every learning is a structured, governed object — not a slide. This is the unit of reuse.</div></div>
           <div class="lo-card" style="border:none;box-shadow:none;margin:18px 0 0;border-radius:0">
             <div class="lo-head">
               <div class="lo-id"><span>Learning Object ID</span>LO-DE-ACCESS-0007</div>
@@ -806,7 +810,7 @@
       <section class="section" id="ex-zaso">
         <div class="eyebrow"><span class="ed"></span>04 · The Anchor Asset · Zasocitinib (TAK-279)</div>
         <h2 class="h-title">A best-in-class molecule needs a <em>best-in-class launch nervous system.</em></h2>
-        <p class="h-sub">Zasocitinib is a next-generation, highly selective oral TYK2 inhibitor for plaque psoriasis <span class="badge confirmed">Public clinical data</span></p>
+        <p class="h-sub">Zasocitinib is a next-generation, highly selective oral TYK2 inhibitor for plaque psoriasis — acquired from Nimbus Therapeutics for ~$4B upfront plus two $1B milestones. It is <strong>investigational</strong>; NDA submissions begin FY2026. <span class="badge confirmed">Public clinical data</span></p>
 
         <div class="kpis" style="grid-template-columns:repeat(4,1fr);margin-bottom:26px">
           <div class="kpi reveal"><div class="kpi-head"><div class="kpi-label">TYK2 selectivity</div></div><div class="kpi-val" style="font-size:38px">1.7M<span class="u">×</span></div><div class="kpi-sub">fold-selective vs JAK1 JH2 domain (Bunick, ESDR 2024). Deucravacitinib: 87×.</div></div>
@@ -841,8 +845,8 @@
       <!-- PSOMATE -->
       <section class="section" id="ex-pso">
         <div class="eyebrow"><span class="ed"></span>05 · Digital Health · PsoMate</div>
-        <h2 class="h-title">Where the patient meets the system and becomes a <em>compliant signal.</em></h2>
-        <p class="h-sub">PsoMate is Takeda's companion app for people living with psoriasis on zasocitinib. It helps patients directly and its <strong>aggregated, de-identified</strong> patterns become a real-world signal source for Takeda OS. The cleanest demonstration of "patterns travel, patients don't."</p>
+        <h2 class="h-title">Where the patient meets the system — and becomes a <em>compliant signal.</em></h2>
+        <p class="h-sub">PsoMate is Takeda's companion app for people living with psoriasis on zasocitinib. It helps patients directly — and its <strong>aggregated, de-identified</strong> patterns become a real-world signal source for Takeda OS. The cleanest demonstration of "patterns travel, patients don't."</p>
 
         <div class="pso-wrap">
           <!-- PHONE -->
@@ -1002,9 +1006,9 @@
       <!-- ====================== GEO / LLM VISIBILITY ====================== -->
       <section class="section" id="ex-geo">
         <div class="eyebrow"><span class="ed"></span>The New Front Door · LLM & AI-Engine Visibility</div>
-        <h2 class="h-title">When a patient asks an AI <em>"what's the best psoriasis pill?"</em> is Takeda in the answer?</h2>
+        <h2 class="h-title">When a patient asks an AI <em>"what's the best psoriasis pill?"</em> — is Takeda in the answer?</h2>
         <p class="h-sub">
-          Patients and HCPs increasingly start in ChatGPT, Gemini, Perplexity and Google AI Overviews not on a brand site. These engines preferentially cite <strong>independent authorities</strong> (Drugs.com, GoodRx, Mayo Clinic, NIH/MedlinePlus, PubMed) over manufacturer pages.
+          Patients and HCPs increasingly start in ChatGPT, Gemini, Perplexity and Google AI Overviews — not on a brand site. These engines preferentially cite <strong>independent authorities</strong> (Drugs.com, GoodRx, Mayo Clinic, NIH/MedlinePlus, PubMed) over manufacturer pages. An investigational drug with no brand name has a <strong>structural visibility gap</strong> — and learning to close it is itself reusable across every market.
         </p>
 
         <div class="kpis" style="grid-template-columns:repeat(4,1fr);margin-bottom:30px">
@@ -1037,7 +1041,7 @@
         <div class="panel reveal">
           <div class="panel-head">
             <div>
-              <div class="panel-title">GEO (Generative Engine Optimization) audit where Takeda is invisible today</div>
+              <div class="panel-title">GEO audit — where Takeda is invisible today</div>
               <div class="panel-sub">High-intent queries patients &amp; HCPs actually ask AI engines · synthetic visibility scores, real query set</div>
             </div>
             <span class="badge validate">Validate internally</span>
@@ -1054,7 +1058,7 @@
           <div class="card reveal" style="padding:28px">
             <div class="panel-title" style="font-size:20px;margin-bottom:6px">Why zaso is structurally invisible</div>
             <p style="font-size:13.5px;color:var(--ink-2);line-height:1.7">
-              As an unapproved compound, zasocitinib lacks the canonical entities AI engines cite — no Drugs.com monograph, GoodRx page, FDA label or WebMD article. Competitors own these. Takeda's content clusters in trade press (FierceBiotech, AJMC) and journals (JAMA Dermatology) <b style="color:var(--navy)">not the patient-facing comparison engines that LLMs read</b>. A study of <b style="color:var(--navy)">130,070</b> US health queries found brand-and-location modifiers were <em>less</em> likely to trigger AI Overviews; engines favor authoritative, independent sources.
+              As an unapproved compound, zasocitinib lacks the canonical entities AI engines cite — no Drugs.com monograph, GoodRx page, FDA label or WebMD article. Competitors own these. Takeda's content clusters in trade press (FierceBiotech, AJMC) and journals (JAMA Dermatology) — <b style="color:var(--navy)">not the patient-facing comparison engines that LLMs read</b>. A study of <b style="color:var(--navy)">130,070</b> US health queries found brand-and-location modifiers were <em>less</em> likely to trigger AI Overviews; engines favor authoritative, independent sources.
             </p>
           </div>
           <div class="card reveal" style="padding:28px">
@@ -1075,16 +1079,16 @@
         <div class="banner reveal" style="margin-top:26px">
           <div class="banner-tag">Why this belongs on the board agenda</div>
           <h3>The "is TYK2 safer than JAK?" question is being answered <em>without Takeda in the room.</em></h3>
-          <p>FDA boxed warnings apply to JAK inhibitors; selective TYK2 inhibitors carry <b>no black box</b>. That nuance is zaso's core differentiation yet today AI engines answer the safety question by citing third parties. The visibility a launch wins (or loses) in market A, captured as a learning object, makes the next market's pre-launch content strategy <b>smarter and faster</b>. <span class="badge illus" style="margin-left:6px">Non-promotional · pre-approval framing</span></p>
+          <p>FDA boxed warnings apply to JAK inhibitors; selective TYK2 inhibitors carry <b>no black box</b>. That nuance is zaso's core differentiation — yet today AI engines answer the safety question by citing third parties. The visibility a launch wins (or loses) in market A, captured as a learning object, makes the next market's pre-launch content strategy <b>smarter and faster</b>. <span class="badge illus" style="margin-left:6px">Non-promotional · pre-approval framing</span></p>
         </div>
       </section>
 
       <!-- ====================== BUSINESS IMPACT / ROI ====================== -->
       <section class="section" id="ex-impact">
         <div class="eyebrow"><span class="ed"></span>The Business Case · Impact &amp; ROI</div>
-        <h2 class="h-title">One launch, run <em>85 times</em> each one smarter than the last.</h2>
+        <h2 class="h-title">One launch, run <em>85 times</em> — each one smarter than the last.</h2>
         <p class="h-sub">
-          The US Army's lesson <strong>"we're not opening 16 warehouses, we're opening one warehouse 16 times"</strong> maps directly onto Takeda. Across three assets, geographies, access archetypes, indications and launch stages, the value of Takeda OS is the <strong>compounding cost of <em>not</em> reusing</strong> what each launch already learned.
+          The US Army's lesson — <strong>"we're not opening 16 warehouses, we're opening one warehouse 16 times"</strong> — maps directly onto Takeda. Across three assets, geographies, access archetypes, indications and launch stages, the value of Takeda OS is the <strong>compounding cost of <em>not</em> reusing</strong> what each launch already learned.
         </p>
 
         <div class="roi-grid" style="margin-bottom:34px">
@@ -1097,8 +1101,8 @@
         <div class="panel reveal">
           <div class="panel-head">
             <div>
-              <div class="panel-title">The Executive objection map pre-answered</div>
-              <div class="panel-sub">Every hard question a Leadership will ask, and the feature that answers it · tap to expand</div>
+              <div class="panel-title">The CTO objection map — pre-answered</div>
+              <div class="panel-sub">Every hard question a CEO or CTO will ask, and the feature that answers it · tap to expand</div>
             </div>
           </div>
           <div id="objList"></div>
@@ -1390,7 +1394,7 @@
         <div class="eyebrow" style="justify-content:center"><span class="ed"></span>The Takeaway</div>
         <h1 class="closing-h1">Not another system of record.<br>The enterprise <em>learning layer.</em></h1>
         <p class="closing-lead">
-          Takeda already owns good foundational platform an enterprise learning layer needs. Takeda OS sits above them turning existing systems into a reusable intelligence ecosystem where one market, product and function makes every other smarter. Aggressive intelligence, conservative trust.
+          Takeda already owns every foundational platform an enterprise learning layer needs. Takeda OS sits above them — turning existing systems into a reusable intelligence ecosystem where one market, product and function makes every other smarter. Aggressive intelligence, conservative trust.
         </p>
         <div class="pillars">
           <div class="reveal">
@@ -1486,7 +1490,7 @@
   }
   function setFoot(){
     footEl.innerHTML = currentLens==="exec"
-      ? 'Executive briefing for <b>Leadership</b>. Outcome, business value &amp; impact.<br><br>Zasocitinib is investigational. Signals are synthetic. ~85 launch moments is a planning hypothesis.'
+      ? 'Executive briefing for <b>CEO &amp; CTO</b>. Outcome, business value &amp; impact.<br><br>Zasocitinib is investigational. Signals are synthetic. ~85 launch moments is a planning hypothesis.'
       : 'Technical deep-dive. How Takeda\u2019s <b>existing systems</b> connect to a thin governed learning layer.<br><br>Substrate is confirmed &amp; GA. Internal stack scope to validate.';
   }
 
@@ -1609,11 +1613,11 @@
     { q:'"TAK-279 clinical trial results"', e:"ChatGPT", src:"ClinicalTrials.gov · trade press", vis:"Partial", gap:"moderate", opp:"Structured trial markup" },
   ];
   const OBJ = [
-    ["Salesforce already does this","LSC is a system of engagement native for HCP/patient objects, but <b>not</b> for cross-market learning objects, applicability scoring or compliant pattern transfer (gap rows 17–36). Takeda OS is a learning object sitting <b>above</b> LSC data."],
+    ["Salesforce already does this","LSC is a system of engagement — native for HCP/patient objects, but <b>not</b> for cross-market learning objects, applicability scoring or compliant pattern transfer (gap rows 17–36). Takeda OS is a learning object sitting <b>above</b> LSC data."],
     ["We have Databricks / AWS for analytics","Those are substrate. Analytics ≠ governed reusable learning with MLR / privacy / allowed-use. Takeda OS <b>uses</b> Databricks as the engine and adds the learning layer on top."],
-    ["This creates another silo","The opposite. Takeda OS holds <b>no</b> system of record it federates via Zero Copy + Direct Data API and moves <b>patterns, not data</b>."],
+    ["This creates another silo","The opposite. Takeda OS holds <b>no</b> system of record — it federates via Zero Copy + Direct Data API and moves <b>patterns, not data</b>."],
     ["This will never pass compliance","Designed compliance-first: Annex 22 / Part 11 audit trails, human-in-the-loop, and <b>no patient-data movement</b>. The 32-row governance matrix maps every obligation to a field."],
-    ["Markets are too different","That is precisely the point applicability scoring quantifies <b>when</b> a learning transfers and flags when it doesn\u2019t (US 0.30 vs UK 0.90)."],
+    ["Markets are too different","That is precisely the point — applicability scoring quantifies <b>when</b> a learning transfers and flags when it doesn\u2019t (US 0.30 vs UK 0.90)."],
     ["We tried knowledge portals before","Portals were passive document dumps. Takeda OS is active: governed objects, confidence, routing and outcome tracking — the <b>CALL model, not SharePoint</b>."],
     ["Who will maintain this","Human owners per learning object, with expiry dates. The federated digital-factory model already exists at Takeda."],
     ["What is the ROI","Quantify launch-delay cost avoided, duplicate MLR content, repeated-analysis cost, MLR acceleration, access-delay cost and productivity — surfaced as Learning Velocity cockpit KPIs."],
@@ -1769,7 +1773,8 @@
           .style("fill",function(d){ const iso=numIso[String(d.id).padStart(3,"0")]; const m=iso&&MARKETS.find(x=>x.iso===iso); return m?m.arche:null; })
           .style("fill-opacity",function(d){ const iso=numIso[String(d.id).padStart(3,"0")]; return iso&&isoSet.has(iso)?0.78:1; })
           .on("click",function(e,d){ const iso=numIso[String(d.id).padStart(3,"0")]; const m=iso&&MARKETS.find(x=>x.iso===iso); if(m) showMarket(m); });
-        // countryG is already behind connG and dotG in DOM order — no need to lower/raise
+        countryG.lower();           // keep countries beneath connections + dots
+        connG.raise(); dotG.raise();
       }).catch(()=>{ /* dots/connections already shown */ });
     }
   })();
