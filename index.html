@@ -988,15 +988,56 @@
               </div>
             </div>
             <div class="pso-flow reveal">
-              <div class="pso-flow-t">How PsoMate feeds Takeda OS — compliantly</div>
-              <div class="pso-flow-steps">
-                <span class="pso-fstep">Patient logs in PsoMate</span><span class="pso-farrow">→</span>
-                <span class="pso-fstep">De-identified &amp; aggregated</span><span class="pso-farrow">→</span>
-                <span class="pso-fstep">Pattern, not record</span><span class="pso-farrow">→</span>
-                <span class="pso-fstep">Patient-Support learning object</span><span class="pso-farrow">→</span>
-                <span class="pso-fstep" style="border-color:rgba(230,0,18,.3);color:var(--red)">Similar markets get smarter</span>
+              <div class="pso-flow-t">How PsoMate learning travels — compliantly</div>
+
+              <div style="padding:14px 15px;border-radius:14px;background:#fff;border:1px solid rgba(230,0,18,.12);box-shadow:var(--shadow-sm)">
+                <div style="font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:7px">Patient-support pattern detected</div>
+                <div style="font-family:var(--serif);font-size:20px;line-height:1.25;color:var(--navy)">
+                  “32% of new patients could not complete the insurance/support approval step before getting their first refil”
+                </div>
               </div>
-              <p style="font-size:12.5px;color:var(--ink-2);line-height:1.6;margin-top:14px">Example pattern: <b style="color:var(--navy)">"X% of newly-diagnosed patients drop off at benefits verification"</b> becomes a process-improvement learning object — never a patient record. PsoMate is a source system in Layer&nbsp;1; only the aggregated pattern ever reaches Layer&nbsp;3.</p>
+
+              <div class="pso-flow-steps" style="margin-top:14px">
+                <span class="pso-fstep">Local PsoMate pattern</span><span class="pso-farrow">→</span>
+                <span class="pso-fstep">Aggregated, not patient record</span><span class="pso-farrow">→</span>
+                <span class="pso-fstep">Applicability scored</span><span class="pso-farrow">→</span>
+                <span class="pso-fstep" style="border-color:rgba(230,0,18,.3);color:var(--red)">Similar markets act</span>
+              </div>
+
+              <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:14px">
+                <div style="padding:10px;border-radius:11px;background:rgba(4,120,87,.07);border:1px solid rgba(4,120,87,.14)">
+                  <b style="font-size:12px;color:var(--emerald)">Reuse</b>
+                  <div style="font-size:11px;color:var(--ink-2);margin-top:3px">Canada 0.82 · Australia 0.78</div>
+                </div>
+                <div style="padding:10px;border-radius:11px;background:rgba(180,83,9,.07);border:1px solid rgba(180,83,9,.14)">
+                  <b style="font-size:12px;color:var(--amber)">Adapt</b>
+                  <div style="font-size:11px;color:var(--ink-2);margin-top:3px">Brazil 0.54 · Spain 0.50</div>
+                </div>
+                <div style="padding:10px;border-radius:11px;background:rgba(230,0,18,.06);border:1px solid rgba(230,0,18,.12)">
+                  <b style="font-size:12px;color:var(--red)">Suppress</b>
+                  <div style="font-size:11px;color:var(--ink-2);margin-top:3px">Japan 0.28 · different access flow</div>
+                </div>
+                <div style="padding:10px;border-radius:11px;background:rgba(30,64,175,.06);border:1px solid rgba(30,64,175,.12)">
+                  <b style="font-size:12px;color:var(--blue)">Learning object</b>
+                  <div style="font-size:11px;color:var(--ink-2);margin-top:3px">Patient-support friction · approved use only</div>
+                </div>
+              </div>
+
+              <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--line)">
+                <div style="font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px">How this helps Takeda modules</div>
+                <div style="display:flex;flex-wrap:wrap;gap:6px">
+                  <span class="pso-fstep">Patient Care: Detects where patients struggle and fix onboarding</span>
+                  <span class="pso-fstep">Access: Identifies where reimbursement, benefits verification, affordability, or step-therapy friction affects patient continuation.</span>
+                  <span class="pso-fstep">Commercial: Shows aggregated education gaps and journey friction by market, without targeting individual patients.</span>
+                  <span class="pso-fstep">Medical: Surfaces recurring patient and HCP-facing questions such as “Is TYK2 different from JAK?”</span>
+                  <span class="pso-fstep">R&amp;D: create RWE hypothesis better evidence strategy, future endpoint ideas, real-world burden insights.</span>
+                  <span class="pso-fstep">Supply: Aggregated adherence and refill patterns can help identify demand shifts</span>
+                </div>
+              </div>
+
+              <p style="font-size:12.5px;color:var(--ink-2);line-height:1.6;margin-top:14px">
+                <b style="color:var(--navy)">Core rule:</b> patients stay local; only compliant patterns travel into Takeda OS.
+              </p>
             </div>
           </div>
         </div>
@@ -1078,7 +1119,7 @@
         <div class="banner reveal" style="margin-top:26px">
           <div class="banner-tag">Why this belongs on the board agenda</div>
           <h3>The "is TYK2 safer than JAK?" question is being answered <em>without Takeda in the room.</em></h3>
-          <p>FDA boxed warnings apply to JAK inhibitors; selective TYK2 inhibitors carry <b>no black box</b>. That nuance is zaso's core differentiation yet today AI engines answer the safety question by citing third parties. The visibility a launch wins (or loses) in market A, captured as a learning object, makes the next market's pre-launch content strategy <b>smarter and faster</b>. <span class="badge illus" style="margin-left:6px">Non-promotional · pre-approval framing</span></p>
+          
         </div>
       </section>
 
